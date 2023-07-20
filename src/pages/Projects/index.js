@@ -11,6 +11,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 
+
 function ProjectCard({ pImageSrc, pTitle, pDesc, pTech, pLink }) {
   return (
     <Card maxW="sm">
@@ -39,28 +40,28 @@ export default function Projects() {
         <Text as='i' >A collection of personal and school projects</Text>
         <SimpleGrid pt="10" columns={2} spacing={10}>
           <ProjectCard
-            pImageSrc="/buddibot.jpg"
+            pImageSrc='/buddibot.jpg'
             pTitle="BuddiBot"
             pDesc="Educational puzzle game for teaching machine learning."
             pTech='Unity, C#, Blender'
             pLink="https://store.steampowered.com/app/1414090/Buddi_Bot__Your_Machine_Learning_AI_Helper_With_Advanced_Neural_Networking/"
           />
         <ProjectCard
-            pImageSrc="/Portfolio.png"
+            pImageSrc="/Portfolio.PNG"
             pTitle="Portfolio"
             pDesc="Professional website for learning frontend development"
             pTech='Next.js, Chakra-UI, AWS Amplify'
             pLink="https://github.com/JoeMuff999/Portfolio"
           />
         <ProjectCard
-            pImageSrc="/uamToolkit.png"
+            pImageSrc="/uamToolkit.PNG"
             pTitle="UAM Toolkit"
             pDesc="Toolkit for researching Urban Air Mobility planning. Published in NASA Formal Methods 2021"
             pTech='Python'
             pLink="https://github.com/JoeMuff999/UAM-Planning-Toolkit/tree/master"
           />
         <ProjectCard
-            pImageSrc="/whatTheFlock.png"
+            pImageSrc="/whatTheFlock.PNG"
             pTitle="What The Flock!"
             pDesc="A 3D Duck Hunt parody where the player teams up with local geese to eliminate noisy airplanes"
             pTech='Unity, C#, Blender'
