@@ -17,6 +17,7 @@ import {
 import { domMax } from "framer-motion";
 import GithubIcon from "../components/icons/github";
 import LinkedinIcon from "../components/icons/linkedin"
+import MailIcon from '../components/icons/mail'
 
 
 
@@ -42,8 +43,8 @@ export default function LandingPage() {
             </Box>
             <Spacer/>
             <Box>
-              <Link href="https://github.com/joemuff999" isExternal>
-                <IconButton icon={<LinkedinIcon />} />
+              <Link href="mailto:joeymuffoletto10@gmail.com" isExternal>
+                <IconButton icon={<MailIcon />} />
               </Link>
             </Box>
           </Flex>
