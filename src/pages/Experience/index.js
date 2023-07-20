@@ -69,7 +69,7 @@ export default function Experience() {
             description="Game Developer. Unity, C#"
           />
           <WorkExperience
-            companyName="Tietronix, UT Austin"
+            companyName="Tietronix"
             role="AR/VR Developer Intern"
             tenure="Summer 2020"
             description="VR EMS Trainings. Unity, C#, VRTK"

@@ -18,3 +18,5 @@ Personal Website. Next.js styled using [Chakra-UI](https://chakra-ui.com/)
 - [ ] Hosting
     - [x] AWS Amplify
     - [ ] Custom domain
+- [ ] Performance
+    - [ ] One second load times
