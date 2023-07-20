@@ -2,6 +2,19 @@
 
 Personal Website. Next.js styled using [Chakra-UI](https://chakra-ui.com/)
 
-I like the idea of this looking like "notes" with pencil lines drawing around, highlighting important aspects of the page. Animate them as well 
-
-NavBar does not work on mobile	
+## TODO
+- [ ] Content
+    - [ ] About
+        - [x] Basic Info
+        - [ ] Coursework
+    - [x] Work Experience
+    - [x] Projects
+- [ ] Style
+    - [x] Basic Styling
+    - [ ] About Page Animations
+    - [ ] Work Experience Animations
+    - [ ] 3D Projects Page
+    - [ ] Mobile
+- [ ] Hosting
+    - [x] AWS Amplify
+    - [ ] Custom domain

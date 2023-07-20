@@ -35,7 +35,8 @@ export default function Projects() {
   return (
     <Box display={{ md: "flex" }}>
       <Box flexGrow={1}>
-        <Heading>Projects</Heading>
+        <Heading pb={5}>Projects</Heading>
+        <Text as='i' >A collection of personal and school projects</Text>
         <SimpleGrid pt="10" columns={2} spacing={10}>
           <ProjectCard
             pImageSrc="/buddibot.jpg"
@@ -44,7 +45,27 @@ export default function Projects() {
             pTech='Unity, C#, Blender'
             pLink="https://store.steampowered.com/app/1414090/Buddi_Bot__Your_Machine_Learning_AI_Helper_With_Advanced_Neural_Networking/"
           />
-          {/* <ProjectCard pImageSrc="/buddibot.jpg" /> */}
+        <ProjectCard
+            pImageSrc="/Portfolio.png"
+            pTitle="Portfolio"
+            pDesc="Professional website for learning frontend development"
+            pTech='Next.js, Chakra-UI, AWS Amplify'
+            pLink="https://github.com/JoeMuff999/Portfolio"
+          />
+        <ProjectCard
+            pImageSrc="/uamToolkit.png"
+            pTitle="UAM Toolkit"
+            pDesc="Toolkit for researching Urban Air Mobility planning. Published in NASA Formal Methods 2021"
+            pTech='Python'
+            pLink="https://github.com/JoeMuff999/UAM-Planning-Toolkit/tree/master"
+          />
+        <ProjectCard
+            pImageSrc="/whatTheFlock.png"
+            pTitle="What The Flock!"
+            pDesc="A 3D Duck Hunt parody where the player teams up with local geese to eliminate noisy airplanes"
+            pTech='Unity, C#, Blender'
+            pLink="https://github.com/JoeMuff999/WhatTheFlock"
+          />
         </SimpleGrid>
       </Box>
     </Box>

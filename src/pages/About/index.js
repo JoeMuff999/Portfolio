@@ -21,13 +21,16 @@ export default function About() {
       <Box flexGrow={1}>
         <Heading as='h2' variant='page-title' pb={5}>About Me</Heading>
         <Text>
-            Hello, I recently graduated from the University of Texas at Austin with a bachelors and masters in Computer science. I am currently a software engineer at Amazon in CDO Privacy.
+            Hello, I recently graduated from the University of Texas at Austin with a bachelors and masters in computer science. I am currently a software engineer at Amazon in SDO Privacy.
         </Text>
+        <br/>
         <Text>
-            I am originally from Houston, Texas, and currently reside in Austin. 
+            I am originally from Houston and currently reside in Austin. 
         </Text>
+        <br/>
+
         <Text>
-            I am interested in software development. I have experience with game development, distributed systems, robotics, AI, and VR/AR. 
+            I am interested in software development. I have experience with distributed systems, game development, robotics, AI, and VR/AR. 
         </Text>
       </Box>
     </Box>
