@@ -18,16 +18,15 @@ const NavLink = ({ children }) => (
 );
 
 
-//TODO: these buttons disappear when the window gets too small
 export default function Navbar() {
   return (
-    <Box display={{ md: "flex" }} align="center">
+    <Box display={{ md: "flex" }} align="center" >
       <Box flexGrow={1}>
         <Flex p="4" alignItems={"center"} justifyContent={"space-between"}>
           <Link href='/'>
             <IconButton icon={<HomeIcon />} />
           </Link>
-          <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
+          <HStack as={"nav"} spacing={4} display={{ base: "flex", md: "flex" }}>
             {Links.map((link) => (
               <NavLink key={link}>{link}</NavLink>
             ))}
