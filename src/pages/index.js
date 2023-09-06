@@ -20,7 +20,7 @@ export default function LandingPage() {
     <Center h="80vh">
       <Box display={{ md: "flex" }} align="center">
         <Box flexGrow={1}>
-          <Heading variant="page-title">Joseph Muffoletto</Heading>
+          <Heading variant="page-title">Joey Muffoletto</Heading>
           <p>Software Engineer</p>
           <Flex pt={4} w='12em'>
             <Box>

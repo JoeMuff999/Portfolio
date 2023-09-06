@@ -21,20 +21,13 @@ export default function About() {
       <Box flexGrow={1}>
         <Heading as='h2' variant='page-title' pb={5}>About Me</Heading>
         <Text >
-            Hello, I recently graduated from the <Text as='span' bg='orange.200' rounded='full' px='10px' py='3px'>University of Texas at Austin</Text> with a bachelors and masters in <Text as='span' bg='orange.200' rounded='full' px='8px' py='3px'>computer science</Text>. I am currently a software engineer at Amazon in SDO Privacy.
-        </Text>
-        <br/>
-        <Text>
-            I am originally from Houston and currently reside in Austin. 
-        </Text>
-        <br/>
 
-        <Text>
-            I am interested in software development. I have experience with distributed systems, game development, robotics, AI, and VR/AR. 
+           <Text as='b'>Hello! I'm Joey.</Text> <br/> 
+           I'm a 21 year old software developer in Austin. Originally from Houston, I moved to Austin in 2019 to pursue a computer science degree at UT. During my time there, I led the software system for our school's FSAE team, developed tools for published research, and invested time into my fraternity. After graduating with my bachelors and masters in 2023, I now spend my time developing software for the Privacy team at Amazon. 
         </Text>
         <br/>
         <Text>
-            Contact me at joeymuffoletto10@gmail.com
+            {/* Contact me at joeymuffoletto10@gmail.com */}
         </Text>
       </Box>
     </Box>

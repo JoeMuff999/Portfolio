@@ -14,7 +14,7 @@ const Main = ({ children, router }) => {
     <Box as="main" pb={4}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Joseph Muffoletto</title>
+        <title>Joey Muffoletto</title>
       </Head>
       <Navbar />
         <Container maxW="container.md" animation={fadeAnimation}>{children}</Container>
