@@ -42,7 +42,8 @@ export default function Experience() {
             description: "Autonomous Vehicle Planner",
             icon: FaUniversity,
             techStack: [
-                { icon: SiPython, name: "Python" }
+                { icon: SiPython, name: "Python" },
+                { icon: FaJava, name: "Java" },
             ],
             side: "left"
         },
