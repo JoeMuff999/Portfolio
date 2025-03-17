@@ -1,0 +1,244 @@
+.timelineContainer {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: transparent;
+    margin: 0;
+    padding: 4rem 0;
+}
+
+.timeline {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.timeline-line {
+    position: absolute;
+    width: 4px;
+    background: #2b6cb0;  /* primary blue */
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 999px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    margin: 48px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.content {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.left .content::after,
+.right .content::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #2b6cb0;  /* primary blue */
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 4px rgba(43, 108, 176, 0.2);
+}
+
+.content:hover::after {
+    transform: translateY(-50%) scale(1.2);
+    box-shadow: 0 0 0 6px rgba(43, 108, 176, 0.2);
+}
+
+.left .content::after {
+    right: -60px;
+}
+
+.right .content::after {
+    left: -60px;
+}
+
+.left .content {
+    margin-right: auto;
+    margin-left: 0;
+    text-align: right;
+    background: linear-gradient(to bottom right, #ffffff, #f7fafc);
+}
+
+.right .content {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: left;
+    background: linear-gradient(to bottom left, #ffffff, #ebf8ff);
+}
+
+.date {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4299e1;  /* lighter blue for dates */
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.companyHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.right .companyHeader {
+    flex-direction: row;
+}
+
+.left .companyHeader {
+    flex-direction: row-reverse;
+}
+
+.companyIcon {
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+/* Remove color override on hover to keep original brand colors */
+.content:hover .companyIcon {
+    transform: scale(1.1);
+}
+
+.company {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2b6cb0;  /* primary blue */
+    margin: 0;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4a5568;  /* dark gray for job titles */
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #4a5568;  /* keeping neutral for better readability */
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.left .techStack {
+    justify-content: flex-end;
+}
+
+.techItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(66, 153, 225, 0.1);  /* lighter blue background */
+    color: #4299e1;  /* lighter blue text */
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.techItem:hover {
+    transform: translateY(-1px);
+    background: rgba(66, 153, 225, 0.2);
+}
+
+.techIcon {
+    font-size: 1rem;
+}
+
+.techName {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        width: 90%;
+    }
+
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        margin: 32px 0;
+    }
+
+    .content {
+        width: calc(100% - 50px);
+        margin-left: 50px !important;
+        text-align: left !important;
+    }
+
+    .left .content::after,
+    .right .content::after {
+        left: -50px;
+        right: auto;
+    }
+
+    .companyHeader,
+    .left .companyHeader {
+        flex-direction: row;
+    }
+
+    .techStack,
+    .left .techStack {
+        justify-content: flex-start;
+    }
+}
+
+.sectionHeader {
+    width: 80%;
+    max-width: 1200px;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.6;
+    max-width: 600px;
+}
