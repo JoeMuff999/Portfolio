@@ -3,94 +3,123 @@
 import { useEffect, useState } from "react";
 import styles from './Timeline.module.css';
 import { FaAmazon, FaUniversity, FaRocket, FaGamepad, FaVrCardboard, FaJava } from 'react-icons/fa';
-import { SiTypescript, SiGo, SiAmazonaws, SiPython, SiUnity, SiCsharp } from 'react-icons/si';
+import { SiTypescript, SiGo, SiAmazonaws, SiPython, SiUnity, SiCsharp, SiReact } from 'react-icons/si';
 
 export default function Experience() {
     const [mounted, setMounted] = useState(false);
 
     const experiences = [
         {
-            date: "2023 - Present",
+            date: "June 2023 - Present",
             company: "Amazon",
             title: "Software Engineer",
-            description: "Kale, CDO Privacy",
-            icon: FaAmazon,
+            description: "Privacy and Compliance",
+            icon: <FaAmazon />,
             techStack: [
-                { icon: SiGo, name: "Go" },
-                { icon: SiTypescript, name: "TypeScript" },
                 { icon: FaJava, name: "Java" },
-                { icon: SiAmazonaws, name: "AWS" }
+                { icon: SiTypescript, name: "Typescript" },
+                { icon: SiAmazonaws, name: "AWS" },
+                { icon: SiGo, name: "Go" },
+                { icon: SiReact, name: "React" },
             ],
-            side: "left"
+            details: [
+                "Built and maintained backend services for privacy compliance with distributed systems",
+                "Reduced unvalidated personal data findings by 70% through automated detection and service owner validation",
+                "Managed AWS infrastructure and supported internal stakeholders including engineers, product managers, and legal teams"
+            ]
         },
         {
-            date: "Summer 2022",
+            date: "June 2022 - August 2022",
             company: "Amazon",
             title: "Software Engineer Intern",
             description: "Delivery Date Improvements",
-            icon: FaAmazon,
+            icon: <FaAmazon />,
             techStack: [
                 { icon: FaJava, name: "Java" },
                 { icon: SiAmazonaws, name: "AWS" }
             ],
+            details: [
+                "Developed a service for evaluating the accuracy of predicted third-party delivery dates"
+            ],
             side: "right"
         },
         {
-            date: "Fall 2019 - Summer 2022",
+            date: "August 2019 - December 2021",
             company: "Autonomous Systems Group, UT Austin",
             title: "Research Assistant",
-            description: "Autonomous Vehicle Planner",
-            icon: FaUniversity,
+            description: "Urban Flight Research",
+            icon: <FaUniversity />,
             techStack: [
                 { icon: SiPython, name: "Python" },
-                { icon: FaJava, name: "Java" },
+                { icon: FaJava, name: "Java" }
+            ],
+            details: [
+                "Researched solutions to automated flight in urban environments",
+                "Developed scripts for modeling linear temporal logic",
+                "Produced data which was published in a paper at NASA Formal Methods 2021"
             ],
             side: "left"
         },
         {
-            date: "Summer 2021",
+            date: "June 2021 - August 2021",
             company: "NASA",
-            title: "Autonomous Vehicle Intern",
-            description: "Autonomous Vehicle Simulations",
-            icon: FaRocket,
+            title: "Research Intern",
+            description: "Urban Air Mobility",
+            icon: <FaRocket />,
             techStack: [
                 { icon: SiPython, name: "Python" }
             ],
+            details: [
+                "Researched solutions to automated flight in urban environments",
+                "Used a graph algorithm for connecting the transportation hubs",
+                "Simulated drone flight using the BOIDs algorithm"
+            ],
             side: "right"
         },
         {
-            date: "Summer 2020",
+            date: "June 2020 - August 2020",
             company: "SAGA Lab, UT Austin",
             title: "Software Engineer Intern",
-            description: "Game Developer",
-            icon: FaGamepad,
+            description: "AI Education Game Development",
+            icon: <FaGamepad />,
             techStack: [
                 { icon: SiUnity, name: "Unity" },
                 { icon: SiCsharp, name: "C#" }
+            ],
+            details: [
+                "Developed a puzzle game for teaching AI concepts",
+                "Coordinated with artists, 3-D modelers and sound designers",
+                "Published the game on Steam: Buddi Bot: Your Machine Learning AI Helper With Advanced Neural Networking!"
             ],
             side: "left"
         },
         {
-            date: "Summer 2020",
+            date: "June 2020 - August 2020",
             company: "Tietronix",
-            title: "AR/VR Developer Intern",
-            description: "VR EMS Trainings",
-            icon: FaVrCardboard,
+            title: "Software Engineer Intern",
+            description: "VR Training Systems",
+            icon: <FaVrCardboard />,
             techStack: [
                 { icon: SiUnity, name: "Unity" },
                 { icon: SiCsharp, name: "C#" }
             ],
+            details: [
+                "Developed virtual reality games for first responder training"
+            ],
             side: "right"
         },
         {
-            date: "Summer 2019",
+            date: "June 2019 - August 2019",
             company: "Tietronix",
             title: "Software Engineer Intern",
-            description: "3D Model Viewer",
-            icon: FaVrCardboard,
+            description: "3D Visualization",
+            icon: <FaVrCardboard />,
             techStack: [
                 { icon: SiUnity, name: "Unity" },
                 { icon: SiCsharp, name: "C#" }
+            ],
+            details: [
+                "Developed a 3-D model viewer for a large engine manufacturing company"
             ],
             side: "left"
         }
@@ -129,12 +158,12 @@ export default function Experience() {
                 {experiences.map((experience, index) => (
                     <div 
                         key={index} 
-                        className={`${styles['timeline-item']} ${styles[experience.side]}`}
+                        className={`${styles['timeline-item']} ${styles[experience.side || (index % 2 === 0 ? 'left' : 'right')]}`}
                     >
                         <div className={styles.content}>
                             <div className={styles.date}>{experience.date}</div>
                             <div className={styles.companyHeader}>
-                                {experience.icon && <experience.icon className={styles.companyIcon} />}
+                                <div className={styles.companyIcon}>{experience.icon}</div>
                                 <h3 className={styles.company}>{experience.company}</h3>
                             </div>
                             <h4 className={styles.title}>{experience.title}</h4>
@@ -147,6 +176,21 @@ export default function Experience() {
                                     </div>
                                 ))}
                             </div>
+                        </div>
+                        <div className={styles.detailsPanel}>
+                            <div className={styles.detailsTitle}>Key Achievements</div>
+                            <ul className={styles.detailsList}>
+                                {(experience.details || [
+                                    "Led key technical initiatives and projects",
+                                    "Collaborated with cross-functional teams",
+                                    "Developed and maintained critical systems",
+                                    "Contributed to team success and growth"
+                                ]).map((detail, index) => (
+                                    <li key={index} className={styles.detailsItem}>
+                                        {detail}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 ))}
